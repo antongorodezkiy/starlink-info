@@ -1,0 +1,85 @@
+@reference "tailwindcss";
+
+.alert {
+  @apply rounded-md p-4;
+}
+
+.alert-gray {
+  @apply bg-gray-200 dark:bg-gray-800;
+
+  .icon {
+    @apply text-gray-400 dark:text-gray-300;
+  }
+
+  .message {
+    @apply text-gray-700 dark:text-gray-300;
+  }
+
+  .details-link {
+    @apply text-gray-700 hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-400;
+  }
+}
+
+.alert-info {
+  @apply bg-indigo-200 dark:bg-indigo-900;
+
+  .icon {
+    @apply text-indigo-400 dark:text-indigo-300;
+  }
+
+  .message {
+    @apply text-indigo-700 dark:text-indigo-300;
+  }
+
+  .details-link {
+    @apply text-indigo-700 hover:text-indigo-600 dark:text-indigo-300 dark:hover:text-indigo-400;
+  }
+}
+
+.alert-success {
+  @apply bg-lime-400/20 dark:bg-lime-400/10;
+
+  .icon {
+    @apply text-lime-400 dark:text-lime-600;
+  }
+
+  .message {
+    @apply text-lime-700 dark:text-lime-300;
+  }
+
+  .details-link {
+    @apply text-lime-700 hover:text-lime-600 dark:text-lime-300 dark:hover:text-lime-400;
+  }
+}
+
+.alert-warning {
+  @apply bg-amber-400/20 dark:bg-amber-400/10;
+
+  .icon {
+    @apply text-amber-400 dark:text-amber-600;
+  }
+
+  .message {
+    @apply text-amber-700 dark:text-amber-300;
+  }
+
+  .details-link {
+    @apply text-amber-700 hover:text-amber-600;
+  }
+}
+
+.alert-error {
+  @apply bg-rose-600/80 dark:bg-rose-600/80;
+
+  .icon {
+    @apply text-white;
+  }
+
+  .message {
+    @apply text-white;
+  }
+
+  .details-link {
+    @apply text-white hover:text-rose-300;
+  }
+}

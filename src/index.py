@@ -1,9 +1,9 @@
 import os
-import random
 import threading
 from time import time
-
 import webview
+
+from api.client import get_starlink_status, get_starlink_location
 
 class Api:
     def fullscreen(self):
@@ -57,16 +57,20 @@ entry = get_entrypoint()
 
 @set_interval(1)
 def update_ticker(window):
-
-    positions = [
-        [48.7385745, 37.58618],
-        [48.7385845, 37.58518],
-        [48.7385645, 37.58718],
-    ]
+    status = {}
+    location = {}
+    error = ''
+    try:
+        status = get_starlink_status()
+        location = get_starlink_location()
+    except Exception as e:
+        error = e
 
     window.state.ticker = {
-        "updatedAt": int(time()),
-        "position": random.choice(positions)
+        'updatedAt': int(time()),
+        'location': location,
+        'status': status,
+        'error': str(error)
     }
 
 if __name__ == '__main__':

@@ -1,0 +1,10 @@
+{
+    "name": "edmin/starlink-info",
+    "authors": [
+        {
+            "name": "Eduard",
+            "email": "eduard.kozachek@gmail.com"
+        }
+    ],
+    "require": {}
+}

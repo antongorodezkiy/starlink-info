@@ -5,10 +5,11 @@
 
 @reference 'tailwindcss';
 
+@import './css/alerts.css';
+@import './css/badges.css';
+@import './css/buttons.css';
 @import './css/fonts.css';
 /* @import './global.css';
-@import './components/alerts.css';
-@import './components/badges.css';
 @import './components/forms.css';
 @import './components/menu.css';
 @import './components/notifications.css';
