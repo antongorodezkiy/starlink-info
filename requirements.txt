@@ -1,4 +1,7 @@
 setuptools
 pywebview
+grpcio
+grpcio-tools
+starlink-client
 pyinstaller; sys_platform != 'darwin'
 py2app; sys_platform == 'darwin'
