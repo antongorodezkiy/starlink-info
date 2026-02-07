@@ -2,9 +2,12 @@ import grpc
 
 from spacex.api.device.device_pb2 import Request, GetStatusRequest, GetLocationRequest
 from spacex.api.device.device_pb2_grpc import DeviceStub
+# XXX: our VPN doesn't allow us to connect anything other thant 88.*
+# api_address = '192.168.100.1:9200'
+api_address = '192.168.88.250:9200'
 
 def get_starlink_status():
-  channel = grpc.insecure_channel('192.168.100.1:9200')
+  channel = grpc.insecure_channel(api_address)
   stub = DeviceStub(channel)
 
   response = {}
@@ -24,7 +27,7 @@ def get_starlink_status():
   return response
 
 def get_starlink_location():
-  channel = grpc.insecure_channel('192.168.100.1:9200')
+  channel = grpc.insecure_channel(api_address)
   stub = DeviceStub(channel)
 
   response = {}
